@@ -10,6 +10,15 @@
 		7AD0C5471F0BFD9100670726 /* NotificationObservers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */; };
 		7AD0C54C1F0BFD9100670726 /* NotificationObserversTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C54B1F0BFD9100670726 /* NotificationObserversTests.swift */; };
 		7AD0C54E1F0BFD9100670726 /* NotificationObservers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD0C5401F0BFD9100670726 /* NotificationObservers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AD0C5601F0BFED200670726 /* KeyboardDidChangeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C5571F0BFED200670726 /* KeyboardDidChangeFrame.swift */; };
+		7AD0C5611F0BFED200670726 /* KeyboardDidHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C5581F0BFED200670726 /* KeyboardDidHide.swift */; };
+		7AD0C5621F0BFED200670726 /* KeyboardDidShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C5591F0BFED200670726 /* KeyboardDidShow.swift */; };
+		7AD0C5631F0BFED200670726 /* KeyboardWillChangeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C55A1F0BFED200670726 /* KeyboardWillChangeFrame.swift */; };
+		7AD0C5641F0BFED200670726 /* KeyboardWillHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C55B1F0BFED200670726 /* KeyboardWillHide.swift */; };
+		7AD0C5651F0BFED200670726 /* KeyboardWillShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C55C1F0BFED200670726 /* KeyboardWillShow.swift */; };
+		7AD0C5661F0BFED200670726 /* NotificationCenterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C55D1F0BFED200670726 /* NotificationCenterExtensions.swift */; };
+		7AD0C5671F0BFED200670726 /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C55E1F0BFED200670726 /* NotificationObserver.swift */; };
+		7AD0C5681F0BFED200670726 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C55F1F0BFED200670726 /* NotificationType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +38,15 @@
 		7AD0C5461F0BFD9100670726 /* NotificationObserversTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationObserversTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD0C54B1F0BFD9100670726 /* NotificationObserversTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationObserversTests.swift; sourceTree = "<group>"; };
 		7AD0C54D1F0BFD9100670726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AD0C5571F0BFED200670726 /* KeyboardDidChangeFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDidChangeFrame.swift; sourceTree = "<group>"; };
+		7AD0C5581F0BFED200670726 /* KeyboardDidHide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDidHide.swift; sourceTree = "<group>"; };
+		7AD0C5591F0BFED200670726 /* KeyboardDidShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDidShow.swift; sourceTree = "<group>"; };
+		7AD0C55A1F0BFED200670726 /* KeyboardWillChangeFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardWillChangeFrame.swift; sourceTree = "<group>"; };
+		7AD0C55B1F0BFED200670726 /* KeyboardWillHide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardWillHide.swift; sourceTree = "<group>"; };
+		7AD0C55C1F0BFED200670726 /* KeyboardWillShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardWillShow.swift; sourceTree = "<group>"; };
+		7AD0C55D1F0BFED200670726 /* NotificationCenterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtensions.swift; sourceTree = "<group>"; };
+		7AD0C55E1F0BFED200670726 /* NotificationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationObserver.swift; sourceTree = "<group>"; };
+		7AD0C55F1F0BFED200670726 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +91,10 @@
 			children = (
 				7AD0C5401F0BFD9100670726 /* NotificationObservers.h */,
 				7AD0C5411F0BFD9100670726 /* Info.plist */,
+				7AD0C55F1F0BFED200670726 /* NotificationType.swift */,
+				7AD0C55E1F0BFED200670726 /* NotificationObserver.swift */,
+				7AD0C56A1F0BFF5A00670726 /* NotificationCenter */,
+				7AD0C5691F0BFF4200670726 /* UIWindow */,
 			);
 			path = NotificationObservers;
 			sourceTree = "<group>";
@@ -84,6 +106,27 @@
 				7AD0C54D1F0BFD9100670726 /* Info.plist */,
 			);
 			path = NotificationObserversTests;
+			sourceTree = "<group>";
+		};
+		7AD0C5691F0BFF4200670726 /* UIWindow */ = {
+			isa = PBXGroup;
+			children = (
+				7AD0C5571F0BFED200670726 /* KeyboardDidChangeFrame.swift */,
+				7AD0C5581F0BFED200670726 /* KeyboardDidHide.swift */,
+				7AD0C5591F0BFED200670726 /* KeyboardDidShow.swift */,
+				7AD0C55A1F0BFED200670726 /* KeyboardWillChangeFrame.swift */,
+				7AD0C55B1F0BFED200670726 /* KeyboardWillHide.swift */,
+				7AD0C55C1F0BFED200670726 /* KeyboardWillShow.swift */,
+			);
+			name = UIWindow;
+			sourceTree = "<group>";
+		};
+		7AD0C56A1F0BFF5A00670726 /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				7AD0C55D1F0BFED200670726 /* NotificationCenterExtensions.swift */,
+			);
+			name = NotificationCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +191,7 @@
 				TargetAttributes = {
 					7AD0C53C1F0BFD9100670726 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					7AD0C5451F0BFD9100670726 = {
@@ -196,6 +240,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD0C5621F0BFED200670726 /* KeyboardDidShow.swift in Sources */,
+				7AD0C5641F0BFED200670726 /* KeyboardWillHide.swift in Sources */,
+				7AD0C5611F0BFED200670726 /* KeyboardDidHide.swift in Sources */,
+				7AD0C5631F0BFED200670726 /* KeyboardWillChangeFrame.swift in Sources */,
+				7AD0C5681F0BFED200670726 /* NotificationType.swift in Sources */,
+				7AD0C5671F0BFED200670726 /* NotificationObserver.swift in Sources */,
+				7AD0C5601F0BFED200670726 /* KeyboardDidChangeFrame.swift in Sources */,
+				7AD0C5651F0BFED200670726 /* KeyboardWillShow.swift in Sources */,
+				7AD0C5661F0BFED200670726 /* NotificationCenterExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +375,7 @@
 		7AD0C5521F0BFD9100670726 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -333,6 +387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shared.NotificationObservers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -340,6 +395,7 @@
 		7AD0C5531F0BFD9100670726 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -358,6 +414,7 @@
 		7AD0C5551F0BFD9100670726 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = NotificationObserversTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shared.NotificationObserversTests;
@@ -369,6 +426,7 @@
 		7AD0C5561F0BFD9100670726 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = NotificationObserversTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shared.NotificationObserversTests;
