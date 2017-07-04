@@ -1,5 +1,5 @@
 # NotificationObservers
-The goal of this framework is to make it easier to write and handle [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter) code. We do this by converting notifications into explicit types, and hide `NotificationCenter` behind a [NotificationObserver](https://github.com/rtocd/NotificationObservers/blob/master/NotificationObservers/NotificationObserver.swift) object.
+The goal of this framework is to make it easier to write and handle [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter) code. We do this by converting notifications into explicit types [(NotificationType)](https://github.com/rtocd/NotificationObservers/blob/master/NotificationObservers/NotificationType.swift), and hide `NotificationCenter` behind a [NotificationObserver](https://github.com/rtocd/NotificationObservers/blob/master/NotificationObservers/NotificationObserver.swift) object.
 
 ## A Simple Example
 ```swift
