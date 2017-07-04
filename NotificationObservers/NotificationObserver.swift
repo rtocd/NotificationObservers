@@ -20,9 +20,9 @@ public class NotificationObserver<T: NotificationType>: NSObject {
         NotificationCenter.default.post(name: T.name, object: object, userInfo: userInfo)
     }
     
-    public func setup(queue: OperationQueue = .main, callback: @escaping (T) -> Void) {
+    public func start(queue: OperationQueue = .main, callback: @escaping (T) -> Void) {
         if self.callback != nil {
-            self.tearDown()
+            self.stop()
         }
         
         self.callback = callback
@@ -34,7 +34,7 @@ public class NotificationObserver<T: NotificationType>: NSObject {
         })
     }
     
-    public func tearDown() {
+    public func stop() {
         if let observer = self.observer {
             NotificationCenter.default.removeObserver(observer)
         }
