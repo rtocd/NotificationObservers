@@ -11,4 +11,12 @@ import Foundation
 public protocol NotificationType {
     static var name: Notification.Name { get }
     init?(notification: Notification)
+    
+    static func makeObserver() -> NotificationObserver<Self>
+}
+
+extension NotificationType {
+    public static func makeObserver() -> NotificationObserver<Self> {
+        return NotificationObserver<Self>()
+    }
 }
