@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A4066A71F1154C70051A438 /* WindowNotificationAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4066A61F1154C70051A438 /* WindowNotificationAdaptor.swift */; };
 		7AB9B8061F1135FA0059233F /* KeyboardNotificationAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9B8051F1135FA0059233F /* KeyboardNotificationAdaptor.swift */; };
 		7AB9B8081F114B450059233F /* KeyboardNotificationAdaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9B8071F114B450059233F /* KeyboardNotificationAdaptable.swift */; };
+		7AB9B80A1F114F920059233F /* WindowDidBecomeVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9B8091F114F920059233F /* WindowDidBecomeVisible.swift */; };
+		7AB9B80C1F114FEE0059233F /* WindowDidBecomeHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9B80B1F114FEE0059233F /* WindowDidBecomeHidden.swift */; };
+		7AB9B80E1F11500D0059233F /* WindowDidBecomeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9B80D1F11500D0059233F /* WindowDidBecomeKey.swift */; };
+		7AB9B8101F1150240059233F /* WindowDidResignKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9B80F1F1150240059233F /* WindowDidResignKey.swift */; };
 		7AD0C5471F0BFD9100670726 /* NotificationObservers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */; };
 		7AD0C54C1F0BFD9100670726 /* NotificationObserversTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C54B1F0BFD9100670726 /* NotificationObserversTests.swift */; };
 		7AD0C54E1F0BFD9100670726 /* NotificationObservers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD0C5401F0BFD9100670726 /* NotificationObservers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,8 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A4066A61F1154C70051A438 /* WindowNotificationAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowNotificationAdaptor.swift; sourceTree = "<group>"; };
 		7AB9B8051F1135FA0059233F /* KeyboardNotificationAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationAdaptor.swift; sourceTree = "<group>"; };
 		7AB9B8071F114B450059233F /* KeyboardNotificationAdaptable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationAdaptable.swift; sourceTree = "<group>"; };
+		7AB9B8091F114F920059233F /* WindowDidBecomeVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowDidBecomeVisible.swift; sourceTree = "<group>"; };
+		7AB9B80B1F114FEE0059233F /* WindowDidBecomeHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowDidBecomeHidden.swift; sourceTree = "<group>"; };
+		7AB9B80D1F11500D0059233F /* WindowDidBecomeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowDidBecomeKey.swift; sourceTree = "<group>"; };
+		7AB9B80F1F1150240059233F /* WindowDidResignKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowDidResignKey.swift; sourceTree = "<group>"; };
 		7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotificationObservers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD0C5401F0BFD9100670726 /* NotificationObservers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationObservers.h; sourceTree = "<group>"; };
 		7AD0C5411F0BFD9100670726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +133,11 @@
 				7AD0C55A1F0BFED200670726 /* KeyboardWillChangeFrame.swift */,
 				7AD0C55B1F0BFED200670726 /* KeyboardWillHide.swift */,
 				7AD0C55C1F0BFED200670726 /* KeyboardWillShow.swift */,
+				7A4066A61F1154C70051A438 /* WindowNotificationAdaptor.swift */,
+				7AB9B8091F114F920059233F /* WindowDidBecomeVisible.swift */,
+				7AB9B80B1F114FEE0059233F /* WindowDidBecomeHidden.swift */,
+				7AB9B80D1F11500D0059233F /* WindowDidBecomeKey.swift */,
+				7AB9B80F1F1150240059233F /* WindowDidResignKey.swift */,
 			);
 			name = UIWindow;
 			sourceTree = "<group>";
@@ -250,11 +265,16 @@
 				7AD0C5641F0BFED200670726 /* KeyboardWillHide.swift in Sources */,
 				7AD0C5611F0BFED200670726 /* KeyboardDidHide.swift in Sources */,
 				7AD0C5631F0BFED200670726 /* KeyboardWillChangeFrame.swift in Sources */,
+				7A4066A71F1154C70051A438 /* WindowNotificationAdaptor.swift in Sources */,
 				7AD0C5681F0BFED200670726 /* NotificationType.swift in Sources */,
+				7AB9B8101F1150240059233F /* WindowDidResignKey.swift in Sources */,
 				7AD0C5671F0BFED200670726 /* NotificationObserver.swift in Sources */,
+				7AB9B80E1F11500D0059233F /* WindowDidBecomeKey.swift in Sources */,
 				7AB9B8081F114B450059233F /* KeyboardNotificationAdaptable.swift in Sources */,
 				7AD0C5601F0BFED200670726 /* KeyboardDidChangeFrame.swift in Sources */,
 				7AB9B8061F1135FA0059233F /* KeyboardNotificationAdaptor.swift in Sources */,
+				7AB9B80A1F114F920059233F /* WindowDidBecomeVisible.swift in Sources */,
+				7AB9B80C1F114FEE0059233F /* WindowDidBecomeHidden.swift in Sources */,
 				7AD0C5651F0BFED200670726 /* KeyboardWillShow.swift in Sources */,
 				7AD0C5661F0BFED200670726 /* NotificationCenterExtensions.swift in Sources */,
 			);
