@@ -11,7 +11,7 @@ import Foundation
 public struct WindowDidResignKey: NotificationType, WindowNotificationAdaptable {
     public static let name = Notification.Name.UIWindowDidResignKey
     
-    let adaptor: WindowNotificationAdaptor
+    public let adaptor: WindowNotificationAdaptor
     
     public init?(notification: Notification) {
         self.adaptor = WindowNotificationAdaptor(notification: notification)

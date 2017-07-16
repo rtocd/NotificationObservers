@@ -11,7 +11,7 @@ import UIKit
 public struct KeyboardWillHide: NotificationType, KeyboardNotificationAdaptable {
     public static let name = Notification.Name.UIKeyboardWillHide
     
-    let adaptor: KeyboardNotificationAdaptor
+    public let adaptor: KeyboardNotificationAdaptor
     
     public init?(notification: Notification) {
         self.adaptor = KeyboardNotificationAdaptor(notification: notification)

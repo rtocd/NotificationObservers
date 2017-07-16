@@ -11,7 +11,7 @@ import UIKit
 public struct KeyboardWillChangeFrame: NotificationType, KeyboardNotificationAdaptable {
     public static let name = Notification.Name.UIKeyboardWillChangeFrame
     
-    let adaptor: KeyboardNotificationAdaptor
+    public let adaptor: KeyboardNotificationAdaptor
     
     public init?(notification: Notification) {
         self.adaptor = KeyboardNotificationAdaptor(notification: notification)

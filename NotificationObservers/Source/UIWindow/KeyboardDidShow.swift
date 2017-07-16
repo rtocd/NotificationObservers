@@ -11,7 +11,7 @@ import UIKit
 public struct KeyboardDidShow: NotificationType, KeyboardNotificationAdaptable {
     public static let name = Notification.Name.UIKeyboardDidShow
     
-    let adaptor: KeyboardNotificationAdaptor
+    public let adaptor: KeyboardNotificationAdaptor
     
     public init?(notification: Notification) {
         self.adaptor = KeyboardNotificationAdaptor(notification: notification)

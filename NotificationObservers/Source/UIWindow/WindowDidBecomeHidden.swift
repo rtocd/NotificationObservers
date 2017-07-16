@@ -11,7 +11,7 @@ import Foundation
 public struct WindowDidBecomeHidden: NotificationType, WindowNotificationAdaptable {
     public static let name = Notification.Name.UIWindowDidBecomeHidden
     
-    let adaptor: WindowNotificationAdaptor
+    public let adaptor: WindowNotificationAdaptor
     
     public init?(notification: Notification) {
         self.adaptor = WindowNotificationAdaptor(notification: notification)
