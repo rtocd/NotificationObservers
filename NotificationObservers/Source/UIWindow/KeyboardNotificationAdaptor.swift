@@ -37,6 +37,10 @@ extension KeyboardNotificationAdaptor: CustomDebugStringConvertible {
 
 
 // MARK: - 
+/*
+ The idea with KeyboardNotificationAdaptable is so that I do not have to go `info.adaptor.isLocal` for the notification. Now I can do `info.isLocal`
+ I would rather not have the `adaptor` public, but I am not sure how best to solve this, at this time
+ */
 public protocol KeyboardNotificationAdaptable {
     var adaptor: KeyboardNotificationAdaptor { get }
 }
