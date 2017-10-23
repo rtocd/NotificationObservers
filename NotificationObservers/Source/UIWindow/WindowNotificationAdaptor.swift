@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct WindowNotificationAdaptor {
+public struct WindowNotificationAdaptor: Adaptable {
     public let window: UIWindow
     
     public init(notification: Notification) {
@@ -19,16 +19,5 @@ public struct WindowNotificationAdaptor {
 extension WindowNotificationAdaptor: CustomDebugStringConvertible {
     public var debugDescription: String {
         return "[window: \(String(describing: self.window)))]"
-    }
-}
-
-// MARK: - 
-protocol WindowNotificationAdaptable {
-    var adaptor: WindowNotificationAdaptor { get }
-}
-
-extension WindowNotificationAdaptable {
-    var window: UIWindow {
-        return self.adaptor.window
     }
 }

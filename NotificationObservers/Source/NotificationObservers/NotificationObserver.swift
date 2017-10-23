@@ -8,19 +8,17 @@
 
 import Foundation
 
-public class NotificationObserver<T: NotificationType>: NSObject {
+public class NotificationObserver<A: Adaptable>: NSObject {
     
-    typealias callbackType = (T) -> ()
+    typealias callbackType = (A) -> ()
+    
+    private let name: Notification.Name
     
     private var observer: Any?
     private var callback: callbackType? = nil
     private var queue: OperationQueue?
     
-    public static func postNotification(from object: Any? = nil, userInfo: [AnyHashable: Any]? = nil) {
-        NotificationCenter.default.post(name: T.name, object: object, userInfo: userInfo)
-    }
-    
-    public func start(queue: OperationQueue = .main, callback: @escaping (T) -> Void) {
+    public func start(queue: OperationQueue = .main, callback: @escaping (A) -> Void) {
         if self.callback != nil {
             self.stop()
         }
@@ -28,8 +26,8 @@ public class NotificationObserver<T: NotificationType>: NSObject {
         self.callback = callback
         self.queue = queue
         
-        self.observer = NotificationCenter.default.addObserver(forName: T.name, object: nil, queue: self.queue, using: { [weak self] (notify) in
-            guard let typed = T(notification: notify) else { return }
+        self.observer = NotificationCenter.default.addObserver(forName: self.name, object: nil, queue: self.queue, using: { [weak self] (notify) in
+            let typed = A(notification: notify)
             self?.callback?(typed)
         })
     }
@@ -39,6 +37,12 @@ public class NotificationObserver<T: NotificationType>: NSObject {
             NotificationCenter.default.removeObserver(observer)
         }
         self.callback = nil
+    }
+    
+    public init(name: Notification.Name) {
+        self.name = name
+        
+        super.init()
     }
     
     deinit {

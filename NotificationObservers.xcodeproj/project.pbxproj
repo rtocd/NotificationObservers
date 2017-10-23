@@ -7,21 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A037E851F532DD4003C30F4 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A037E841F532DD4003C30F4 /* Keyboard.swift */; };
 		7A49A1B31F1C221300EA38A5 /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A11F1C221300EA38A5 /* NotificationObserver.swift */; };
-		7A49A1B41F1C221300EA38A5 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A21F1C221300EA38A5 /* NotificationType.swift */; };
+		7A49A1B41F1C221300EA38A5 /* Adaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A21F1C221300EA38A5 /* Adaptable.swift */; };
 		7A49A1B51F1C221300EA38A5 /* NotificationCenterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A41F1C221300EA38A5 /* NotificationCenterExtensions.swift */; };
-		7A49A1B61F1C221300EA38A5 /* KeyboardDidChangeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A61F1C221300EA38A5 /* KeyboardDidChangeFrame.swift */; };
-		7A49A1B71F1C221300EA38A5 /* KeyboardDidHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A71F1C221300EA38A5 /* KeyboardDidHide.swift */; };
-		7A49A1B81F1C221300EA38A5 /* KeyboardDidShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A81F1C221300EA38A5 /* KeyboardDidShow.swift */; };
 		7A49A1BA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1AA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift */; };
-		7A49A1BB1F1C221300EA38A5 /* KeyboardWillChangeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1AB1F1C221300EA38A5 /* KeyboardWillChangeFrame.swift */; };
-		7A49A1BC1F1C221300EA38A5 /* KeyboardWillHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1AC1F1C221300EA38A5 /* KeyboardWillHide.swift */; };
-		7A49A1BD1F1C221300EA38A5 /* KeyboardWillShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1AD1F1C221300EA38A5 /* KeyboardWillShow.swift */; };
-		7A49A1BE1F1C221300EA38A5 /* WindowDidBecomeHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1AE1F1C221300EA38A5 /* WindowDidBecomeHidden.swift */; };
-		7A49A1BF1F1C221300EA38A5 /* WindowDidBecomeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1AF1F1C221300EA38A5 /* WindowDidBecomeKey.swift */; };
-		7A49A1C01F1C221300EA38A5 /* WindowDidBecomeVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1B01F1C221300EA38A5 /* WindowDidBecomeVisible.swift */; };
-		7A49A1C11F1C221300EA38A5 /* WindowDidResignKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1B11F1C221300EA38A5 /* WindowDidResignKey.swift */; };
 		7A49A1C21F1C221300EA38A5 /* WindowNotificationAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1B21F1C221300EA38A5 /* WindowNotificationAdaptor.swift */; };
+		7AAAE0D71F9D8E0E005C1D3D /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAAE0D61F9D8E0E005C1D3D /* Window.swift */; };
 		7AD0C5471F0BFD9100670726 /* NotificationObservers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */; };
 		7AD0C54C1F0BFD9100670726 /* NotificationObserversTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C54B1F0BFD9100670726 /* NotificationObserversTests.swift */; };
 		7AD0C54E1F0BFD9100670726 /* NotificationObservers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD0C5401F0BFD9100670726 /* NotificationObservers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,21 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A037E841F532DD4003C30F4 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		7A49A1A11F1C221300EA38A5 /* NotificationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationObserver.swift; sourceTree = "<group>"; };
-		7A49A1A21F1C221300EA38A5 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
+		7A49A1A21F1C221300EA38A5 /* Adaptable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adaptable.swift; sourceTree = "<group>"; };
 		7A49A1A41F1C221300EA38A5 /* NotificationCenterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtensions.swift; sourceTree = "<group>"; };
-		7A49A1A61F1C221300EA38A5 /* KeyboardDidChangeFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDidChangeFrame.swift; sourceTree = "<group>"; };
-		7A49A1A71F1C221300EA38A5 /* KeyboardDidHide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDidHide.swift; sourceTree = "<group>"; };
-		7A49A1A81F1C221300EA38A5 /* KeyboardDidShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDidShow.swift; sourceTree = "<group>"; };
 		7A49A1AA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationAdaptor.swift; sourceTree = "<group>"; };
-		7A49A1AB1F1C221300EA38A5 /* KeyboardWillChangeFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardWillChangeFrame.swift; sourceTree = "<group>"; };
-		7A49A1AC1F1C221300EA38A5 /* KeyboardWillHide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardWillHide.swift; sourceTree = "<group>"; };
-		7A49A1AD1F1C221300EA38A5 /* KeyboardWillShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardWillShow.swift; sourceTree = "<group>"; };
-		7A49A1AE1F1C221300EA38A5 /* WindowDidBecomeHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowDidBecomeHidden.swift; sourceTree = "<group>"; };
-		7A49A1AF1F1C221300EA38A5 /* WindowDidBecomeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowDidBecomeKey.swift; sourceTree = "<group>"; };
-		7A49A1B01F1C221300EA38A5 /* WindowDidBecomeVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowDidBecomeVisible.swift; sourceTree = "<group>"; };
-		7A49A1B11F1C221300EA38A5 /* WindowDidResignKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowDidResignKey.swift; sourceTree = "<group>"; };
 		7A49A1B21F1C221300EA38A5 /* WindowNotificationAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowNotificationAdaptor.swift; sourceTree = "<group>"; };
+		7AAAE0D61F9D8E0E005C1D3D /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotificationObservers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD0C5401F0BFD9100670726 /* NotificationObservers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationObservers.h; sourceTree = "<group>"; };
 		7AD0C5411F0BFD9100670726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				7A49A1A11F1C221300EA38A5 /* NotificationObserver.swift */,
-				7A49A1A21F1C221300EA38A5 /* NotificationType.swift */,
+				7A49A1A21F1C221300EA38A5 /* Adaptable.swift */,
 			);
 			path = NotificationObservers;
 			sourceTree = "<group>";
@@ -110,18 +94,10 @@
 		7A49A1A51F1C221300EA38A5 /* UIWindow */ = {
 			isa = PBXGroup;
 			children = (
+				7A037E841F532DD4003C30F4 /* Keyboard.swift */,
+				7AAAE0D61F9D8E0E005C1D3D /* Window.swift */,
 				7A49A1AA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift */,
-				7A49A1A61F1C221300EA38A5 /* KeyboardDidChangeFrame.swift */,
-				7A49A1A71F1C221300EA38A5 /* KeyboardDidHide.swift */,
-				7A49A1A81F1C221300EA38A5 /* KeyboardDidShow.swift */,
-				7A49A1AB1F1C221300EA38A5 /* KeyboardWillChangeFrame.swift */,
-				7A49A1AC1F1C221300EA38A5 /* KeyboardWillHide.swift */,
-				7A49A1AD1F1C221300EA38A5 /* KeyboardWillShow.swift */,
 				7A49A1B21F1C221300EA38A5 /* WindowNotificationAdaptor.swift */,
-				7A49A1AE1F1C221300EA38A5 /* WindowDidBecomeHidden.swift */,
-				7A49A1AF1F1C221300EA38A5 /* WindowDidBecomeKey.swift */,
-				7A49A1B01F1C221300EA38A5 /* WindowDidBecomeVisible.swift */,
-				7A49A1B11F1C221300EA38A5 /* WindowDidResignKey.swift */,
 			);
 			path = UIWindow;
 			sourceTree = "<group>";
@@ -220,7 +196,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = RTOCD;
 				TargetAttributes = {
 					7AD0C53C1F0BFD9100670726 = {
@@ -274,21 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A49A1B41F1C221300EA38A5 /* NotificationType.swift in Sources */,
-				7A49A1BD1F1C221300EA38A5 /* KeyboardWillShow.swift in Sources */,
+				7A49A1B41F1C221300EA38A5 /* Adaptable.swift in Sources */,
 				7A49A1B51F1C221300EA38A5 /* NotificationCenterExtensions.swift in Sources */,
-				7A49A1B71F1C221300EA38A5 /* KeyboardDidHide.swift in Sources */,
 				7A49A1C21F1C221300EA38A5 /* WindowNotificationAdaptor.swift in Sources */,
-				7A49A1B81F1C221300EA38A5 /* KeyboardDidShow.swift in Sources */,
-				7A49A1C11F1C221300EA38A5 /* WindowDidResignKey.swift in Sources */,
-				7A49A1BF1F1C221300EA38A5 /* WindowDidBecomeKey.swift in Sources */,
-				7A49A1C01F1C221300EA38A5 /* WindowDidBecomeVisible.swift in Sources */,
-				7A49A1BE1F1C221300EA38A5 /* WindowDidBecomeHidden.swift in Sources */,
 				7A49A1BA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift in Sources */,
-				7A49A1BC1F1C221300EA38A5 /* KeyboardWillHide.swift in Sources */,
-				7A49A1BB1F1C221300EA38A5 /* KeyboardWillChangeFrame.swift in Sources */,
-				7A49A1B61F1C221300EA38A5 /* KeyboardDidChangeFrame.swift in Sources */,
+				7A037E851F532DD4003C30F4 /* Keyboard.swift in Sources */,
 				7A49A1B31F1C221300EA38A5 /* NotificationObserver.swift in Sources */,
+				7AAAE0D71F9D8E0E005C1D3D /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +289,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -329,7 +299,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -375,7 +349,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -383,7 +359,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

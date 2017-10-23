@@ -1,5 +1,5 @@
 # NotificationObservers
-The goal of this framework is to make it easier to write and handle [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter) code. We do this by converting notifications into explicit types ([NotificationType](https://github.com/rtocd/NotificationObservers/blob/master/NotificationObservers/NotificationType.swift)), and hide `NotificationCenter` behind a [NotificationObserver](https://github.com/rtocd/NotificationObservers/blob/master/NotificationObservers/NotificationObserver.swift) object.
+The goal of this framework is to make it easier to write and deal with [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter) code. 
 
 ## A Simple Example
 ```swift
@@ -8,27 +8,18 @@ import NotificationObservers
 
 class ViewController: UIViewController {
     
-    var keyboardWillShowObserver = KeyboardWillShow.makeObserver()
-    var keyboardDidShowObserver = KeyboardDidShow.makeObserver()
-    
-    var keyboardWillHideObserver = KeyboardWillHide.makeObserver()
-    var KeyboardDidHideObserver = KeyboardDidHide.makeObserver()
+    var keyboardWillShowObserver = Keyboard.willShow.makeObserver()
+    var keyboardWillHideObserver = Keyboard.willHide.makeObserver()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.keyboardWillShowObserver.start { (info) in
-            print("keyboardWillShowObserver: \(info)")
-        }
-        self.keyboardDidShowObserver.start { (info) in
-            print("keyboardDidShowObserver: \(info)")
+            print("keyboardWillShowObserver: \(info.endFrame)")
         }
         
         self.keyboardWillHideObserver.start { (info) in
-            print("keyboardWillHideObserver: \(info)")
-        }
-        self.KeyboardDidHideObserver.start { (info) in
-            print("KeyboardDidHideObserver: \(info)")
+            print("keyboardWillHideObserver: \(info.endFrame)")
         }
     }
     
@@ -36,10 +27,7 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
         
         self.keyboardWillShowObserver.stop()
-        self.keyboardDidShowObserver.stop()
-        
         self.keyboardWillHideObserver.stop()
-        self.KeyboardDidHideObserver.stop()
     }
 }
 ```

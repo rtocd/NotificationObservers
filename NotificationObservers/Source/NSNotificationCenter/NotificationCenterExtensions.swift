@@ -9,10 +9,9 @@
 import Foundation
 
 public extension NotificationCenter {
-    public func addObserver<T: NotificationType>(queue: OperationQueue = .main, callback: @escaping (T) -> Void) -> Any {
-        return addObserver(forName: T.name, object: nil, queue: queue, using: { note in
-            guard let typed = T(notification: note) else { return }
-            callback(typed)
+    public func addObserver<A: Adaptable>(key: Notification.Name, object: AnyObject? = nil, queue: OperationQueue = .main, callback: @escaping (A) -> Void) -> Any {
+        return addObserver(forName: key, object: object, queue: queue, using: { note in
+            callback(A(notification: note))
         })
     }
 }
