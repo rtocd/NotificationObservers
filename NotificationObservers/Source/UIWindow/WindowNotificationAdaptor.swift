@@ -8,11 +8,17 @@
 
 import Foundation
 
+/// See Apple documentation for [UIWindow](https://developer.apple.com/documentation/uikit/uiwindow) for more information
 public struct WindowNotificationAdaptor: Adaptable {
-    public let window: UIWindow
+    public let notification: Notification
+    
+    public var window: UIWindow {
+        // Should I really force this? Not really liking the idea of propagating optional.
+        return self.notification.object as! UIWindow
+    }
     
     public init(notification: Notification) {
-        self.window = notification.object as! UIWindow // Should I really force this? Not really liking the idea of propagating optional.
+        self.notification = notification
     }
 }
 

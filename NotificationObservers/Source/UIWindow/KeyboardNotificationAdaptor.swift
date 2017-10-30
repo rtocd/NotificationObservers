@@ -8,30 +8,31 @@
 
 import UIKit
 
+/// See Apple documentation for [Keyboard Notification](https://developer.apple.com/documentation/uikit/uiwindow/keyboard_notification_user_info_keys) for more information
 public struct KeyboardNotificationAdaptor: Adaptable {
     
     public let notification: Notification
     
-    var animationDuration: TimeInterval {
+    public var animationDuration: TimeInterval {
         return self.notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double ?? 0.0
     }
     
-    var isLocal: Bool {
+    public var isLocal: Bool {
         if #available(iOS 9.0, *) {
             return (self.notification.userInfo?[UIKeyboardIsLocalUserInfoKey] as? Bool) ?? true
         }
         return true
     }
     
-    var endFrame: CGRect {
+    public var endFrame: CGRect {
         return ((self.notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) ?? .zero
     }
     
-    var animationCurve: Int {
+    public var animationCurve: Int {
         return (self.notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Int) ?? 0
     }
     
-    var startFrame: CGRect {
+    public var startFrame: CGRect {
         return ((self.notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) ?? .zero
     }
     

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Handles all the UIKeyboard notifications that are declared in [UIWindow](https://developer.apple.com/documentation/uikit/uiwindow)
 public enum Keyboard {
     case willShow, willChangeFrame, willHide, didShow, didChangeFrame, didHide
 

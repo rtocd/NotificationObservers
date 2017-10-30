@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Handles all the UIWindow notifications that are declared in [UIWindow](https://developer.apple.com/documentation/uikit/uiwindow)
 public enum Window {
     case didBecomeHidden, didBecomeKey, didBecomeVisible, didResignKey
     
