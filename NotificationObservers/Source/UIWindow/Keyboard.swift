@@ -17,23 +17,19 @@ public enum Keyboard {
 
         switch self {
         case .willShow:
-            value = Notification.Name.UIKeyboardWillShow
+            value = .UIKeyboardWillShow
         case .willChangeFrame:
-            value = Notification.Name.UIKeyboardWillChangeFrame
+            value = .UIKeyboardWillChangeFrame
         case .willHide:
-            value = Notification.Name.UIKeyboardWillHide
+            value = .UIKeyboardWillHide
         case .didShow:
-            value = Notification.Name.UIKeyboardDidShow
+            value = .UIKeyboardDidShow
         case .didChangeFrame:
-            value = Notification.Name.UIKeyboardDidChangeFrame
+            value = .UIKeyboardDidChangeFrame
         case .didHide:
-            value = Notification.Name.UIKeyboardDidHide
+            value = .UIKeyboardDidHide
         }
 
         return value
-    }
-    
-    public func makeObserver() -> NotificationObserver<KeyboardNotificationAdaptor> {
-        return NotificationObserver<KeyboardNotificationAdaptor>(name: self.name)
     }
 }

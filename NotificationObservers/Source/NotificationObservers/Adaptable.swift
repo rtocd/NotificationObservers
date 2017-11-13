@@ -12,5 +12,3 @@ import Foundation
 public protocol Adaptable {
     init(notification: Notification)
 }
-
-

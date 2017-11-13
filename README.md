@@ -1,5 +1,5 @@
 # NotificationObservers
-The primary goal of this framework is to make it easier to work with [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter). It achieve this by reducing the amount of boilerplate code that you have to write.
+The primary goal of this framework is to make it easier to work with [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter). It achieve this by reducing the amount of boilerplate code that you have to write, for notifications.
 
 ## Code Examples
 Lets compare a common coding problem, where you want to be notified when the keyboard is displayed and get the keyboard height. This first code snippet, show how you would traditionally handle this problem.
@@ -16,7 +16,7 @@ class CurrentViewController: UIViewController {
         let center = NotificationCenter.default
         let key = Notification.Name.UIKeyboardWillShow
         self.keyboardWillShow = center.addObserver(forName: key, object: nil, queue: nil, using: { (notification) in
-            guard let endFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+            let endFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
             print("End Frame: \(endFrame)")
         })
     }
@@ -32,13 +32,14 @@ class CurrentViewController: UIViewController {
 }
 ```
 
-Same problem, but this time use this framework.
+Same problem, but this time using NotificationObservers.
+
 ```swift
 import UIKit
 import NotificationObservers
 
 class ViewController: UIViewController {
-    var keyboardWillShowObserver = Keyboard.willShow.makeObserver()
+    var keyboardWillShowObserver = Keyboard.willShow.makeDefaultObserver()
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -57,7 +58,8 @@ class ViewController: UIViewController {
 ```
 
 ## Custom Notification
-Here is an example of what to do, if you want to create your own Notification using this framework
+Here is an example of what to do, if you want to create your own Notification using this framework.
+
 ```swift
 import NotificationObservers
 
@@ -71,30 +73,49 @@ struct CustomNotification: Adaptable {
     init(notification: Notification) {
         self.notification = notification
     }
-}
-
-extension CustomNotification {
+    
+    // MARK: - Helper method
     static func post(num: Int) {
-        NotificationCenter.default.post(name: Notification.Name.CustomNotificationKey, object: nil, userInfo: ["num": num])
+        NotificationCenter.default.post(name: .CustomNotificationKey,
+                                      object: nil,
+                                    userInfo: ["num": num])
     }
-
+    
     static func makeObserver() -> NotificationObserver<CustomNotification> {
-        return NotificationObserver<CustomNotification>(name: Notification.Name.CustomNotificationKey)
+        return NotificationObserver<CustomNotification>(name: .CustomNotificationKey)
     }
 }
 
 extension Notification.Name {
     static let CustomNotificationKey = Notification.Name("CustomNotificationKey")
 }
+
+// MARK: - Example Use
+class ViewController: UIViewController {
+    var custom = CustomNotification.makeObserver()
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.custom.start { (cust) in
+            print("\nCustom: value: \(cust.number)")
+        }
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        self.custom.stop()
+    }
+    
+    func triggerCustomNotification(value: Int) {
+        CustomNotification.post(num: value)
+    }
+}
 ```
 
-
-### WIP
-This framework is currently a work in progress. With my ultimate goal to create adaptors and enums for all of Apple's frameworks. But I am only one person and I can only do so much. If you don't see a Notification that you need, I would gladly accept a PR for it.
-
-
 ### Extra
-Lets say you do not want to use the NotificationObserver object provided in this framework. That is perfectly ok, but I would recommend that take advantage of the Adaptor objects.
+You are not required to use the NotificationObserver object, you can just use the Adaptor objects.
 
 ```swift
 import UIKit
@@ -108,7 +129,7 @@ class AdaptorOnlyViewController: UIViewController {
 
         let center = NotificationCenter.default
         let key = Notification.Name.UIKeyboardWillShow
-        self.keyboardWillShow = center.addObserver(key: key) { (adp: KeyboardNotificationAdaptor) in
+        self.keyboardWillShow = center.addObserver(key: key) { (adp: Keyboard.DefaultAdaptor) in
             print("End Frame: \(adp.endFrame)")
         }
     }
@@ -123,6 +144,9 @@ class AdaptorOnlyViewController: UIViewController {
     }
 }
 ```
+
+### WIP
+This framework is currently a work in progress. With my ultimate goal to create adaptors for all of Apple's Notification. But I am only one person and I can only do so much. If you don't see a Notification that you need, I would gladly accept a PR for it.
 
 
 

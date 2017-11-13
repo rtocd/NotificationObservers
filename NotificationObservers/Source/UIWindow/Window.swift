@@ -17,19 +17,15 @@ public enum Window {
         
         switch self {
         case .didBecomeHidden:
-            value = Notification.Name.UIWindowDidBecomeHidden
+            value = .UIWindowDidBecomeHidden
         case .didBecomeKey:
-            value = Notification.Name.UIWindowDidBecomeKey
+            value = .UIWindowDidBecomeKey
         case .didBecomeVisible:
-            value = Notification.Name.UIWindowDidBecomeVisible
+            value = .UIWindowDidBecomeVisible
         case .didResignKey:
-            value = Notification.Name.UIWindowDidResignKey
+            value = .UIWindowDidResignKey
         }
         
         return value
-    }
-    
-    public func makeObserver() -> NotificationObserver<WindowNotificationAdaptor> {
-        return NotificationObserver<WindowNotificationAdaptor>(name: self.name)
     }
 }

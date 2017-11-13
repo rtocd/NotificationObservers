@@ -11,8 +11,8 @@ import Foundation
 /// This extension make it so we can just use 
 public extension NotificationCenter {
     public func addObserver<A: Adaptable>(key: Notification.Name, object: AnyObject? = nil, queue: OperationQueue = .main, callback: @escaping (A) -> Void) -> NSObjectProtocol {
-        return addObserver(forName: key, object: object, queue: queue, using: { note in
-            callback(A(notification: note))
+        return addObserver(forName: key, object: object, queue: queue, using: { notification in
+            callback(A(notification: notification))
         })
     }
 }

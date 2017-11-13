@@ -11,9 +11,10 @@
 		7A49A1B31F1C221300EA38A5 /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A11F1C221300EA38A5 /* NotificationObserver.swift */; };
 		7A49A1B41F1C221300EA38A5 /* Adaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A21F1C221300EA38A5 /* Adaptable.swift */; };
 		7A49A1B51F1C221300EA38A5 /* NotificationCenterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A41F1C221300EA38A5 /* NotificationCenterExtensions.swift */; };
-		7A49A1BA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1AA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift */; };
-		7A49A1C21F1C221300EA38A5 /* WindowNotificationAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1B21F1C221300EA38A5 /* WindowNotificationAdaptor.swift */; };
+		7A49A1BA1F1C221300EA38A5 /* KeyboardOptionalAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1AA1F1C221300EA38A5 /* KeyboardOptionalAdaptor.swift */; };
+		7A49A1C21F1C221300EA38A5 /* WindowOptionalAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1B21F1C221300EA38A5 /* WindowOptionalAdaptor.swift */; };
 		7AAAE0D71F9D8E0E005C1D3D /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAAE0D61F9D8E0E005C1D3D /* Window.swift */; };
+		7AB6FF3A1FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6FF391FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift */; };
 		7AD0C5471F0BFD9100670726 /* NotificationObservers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */; };
 		7AD0C54C1F0BFD9100670726 /* NotificationObserversTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0C54B1F0BFD9100670726 /* NotificationObserversTests.swift */; };
 		7AD0C54E1F0BFD9100670726 /* NotificationObservers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD0C5401F0BFD9100670726 /* NotificationObservers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,9 +35,10 @@
 		7A49A1A11F1C221300EA38A5 /* NotificationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationObserver.swift; sourceTree = "<group>"; };
 		7A49A1A21F1C221300EA38A5 /* Adaptable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adaptable.swift; sourceTree = "<group>"; };
 		7A49A1A41F1C221300EA38A5 /* NotificationCenterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtensions.swift; sourceTree = "<group>"; };
-		7A49A1AA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationAdaptor.swift; sourceTree = "<group>"; };
-		7A49A1B21F1C221300EA38A5 /* WindowNotificationAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowNotificationAdaptor.swift; sourceTree = "<group>"; };
+		7A49A1AA1F1C221300EA38A5 /* KeyboardOptionalAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardOptionalAdaptor.swift; sourceTree = "<group>"; };
+		7A49A1B21F1C221300EA38A5 /* WindowOptionalAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowOptionalAdaptor.swift; sourceTree = "<group>"; };
 		7AAAE0D61F9D8E0E005C1D3D /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		7AB6FF391FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDefaultAdaptor.swift; sourceTree = "<group>"; };
 		7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotificationObservers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD0C5401F0BFD9100670726 /* NotificationObservers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationObservers.h; sourceTree = "<group>"; };
 		7AD0C5411F0BFD9100670726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,8 +98,9 @@
 			children = (
 				7A037E841F532DD4003C30F4 /* Keyboard.swift */,
 				7AAAE0D61F9D8E0E005C1D3D /* Window.swift */,
-				7A49A1AA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift */,
-				7A49A1B21F1C221300EA38A5 /* WindowNotificationAdaptor.swift */,
+				7A49A1AA1F1C221300EA38A5 /* KeyboardOptionalAdaptor.swift */,
+				7AB6FF391FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift */,
+				7A49A1B21F1C221300EA38A5 /* WindowOptionalAdaptor.swift */,
 			);
 			path = UIWindow;
 			sourceTree = "<group>";
@@ -252,8 +255,9 @@
 			files = (
 				7A49A1B41F1C221300EA38A5 /* Adaptable.swift in Sources */,
 				7A49A1B51F1C221300EA38A5 /* NotificationCenterExtensions.swift in Sources */,
-				7A49A1C21F1C221300EA38A5 /* WindowNotificationAdaptor.swift in Sources */,
-				7A49A1BA1F1C221300EA38A5 /* KeyboardNotificationAdaptor.swift in Sources */,
+				7A49A1C21F1C221300EA38A5 /* WindowOptionalAdaptor.swift in Sources */,
+				7AB6FF3A1FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift in Sources */,
+				7A49A1BA1F1C221300EA38A5 /* KeyboardOptionalAdaptor.swift in Sources */,
 				7A037E851F532DD4003C30F4 /* Keyboard.swift in Sources */,
 				7A49A1B31F1C221300EA38A5 /* NotificationObserver.swift in Sources */,
 				7AAAE0D71F9D8E0E005C1D3D /* Window.swift in Sources */,
