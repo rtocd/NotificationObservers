@@ -43,16 +43,16 @@ public extension Keyboard {
         }
         
         static func makeObserver(observe: Keyboard) -> NotificationObserver<Keyboard.DefaultAdaptor> {
-            return NotificationObserver<Keyboard.DefaultAdaptor>(name: observe.name)
+            return NotificationObserver(name: observe.name)
         }
     }
     
     public func makeDefaultObserver() -> NotificationObserver<DefaultAdaptor> {
-        return NotificationObserver<DefaultAdaptor>(name: self.name)
+        return NotificationObserver(name: self.name)
     }
     
     public static func makeDefaultObserver(_ keyboard: Keyboard) -> NotificationObserver<DefaultAdaptor> {
-        return NotificationObserver<DefaultAdaptor>(name: keyboard.name)
+        return NotificationObserver(name: keyboard.name)
     }
 }
 

@@ -13,6 +13,10 @@
 		7A49A1B51F1C221300EA38A5 /* NotificationCenterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1A41F1C221300EA38A5 /* NotificationCenterExtensions.swift */; };
 		7A49A1BA1F1C221300EA38A5 /* KeyboardOptionalAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1AA1F1C221300EA38A5 /* KeyboardOptionalAdaptor.swift */; };
 		7A49A1C21F1C221300EA38A5 /* WindowOptionalAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49A1B21F1C221300EA38A5 /* WindowOptionalAdaptor.swift */; };
+		7A8089EA1FCB44F5000A71FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8089E91FCB44F5000A71FA /* ViewController.swift */; };
+		7A8089EC1FCB4542000A71FA /* ViewControllerOptionalAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8089EB1FCB4542000A71FA /* ViewControllerOptionalAdaptor.swift */; };
+		7A8089EF1FCB46BF000A71FA /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8089EE1FCB46BF000A71FA /* Application.swift */; };
+		7A8089F11FCB46CF000A71FA /* ApplicationOptionalAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8089F01FCB46CF000A71FA /* ApplicationOptionalAdaptor.swift */; };
 		7AAAE0D71F9D8E0E005C1D3D /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAAE0D61F9D8E0E005C1D3D /* Window.swift */; };
 		7AB6FF3A1FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6FF391FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift */; };
 		7AD0C5471F0BFD9100670726 /* NotificationObservers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */; };
@@ -37,6 +41,10 @@
 		7A49A1A41F1C221300EA38A5 /* NotificationCenterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtensions.swift; sourceTree = "<group>"; };
 		7A49A1AA1F1C221300EA38A5 /* KeyboardOptionalAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardOptionalAdaptor.swift; sourceTree = "<group>"; };
 		7A49A1B21F1C221300EA38A5 /* WindowOptionalAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowOptionalAdaptor.swift; sourceTree = "<group>"; };
+		7A8089E91FCB44F5000A71FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A8089EB1FCB4542000A71FA /* ViewControllerOptionalAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerOptionalAdaptor.swift; sourceTree = "<group>"; };
+		7A8089EE1FCB46BF000A71FA /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		7A8089F01FCB46CF000A71FA /* ApplicationOptionalAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationOptionalAdaptor.swift; sourceTree = "<group>"; };
 		7AAAE0D61F9D8E0E005C1D3D /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		7AB6FF391FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDefaultAdaptor.swift; sourceTree = "<group>"; };
 		7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotificationObservers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +77,8 @@
 		7A49A19F1F1C221300EA38A5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				7A8089ED1FCB46B4000A71FA /* UIApplication */,
+				7A8089E81FCB44D4000A71FA /* UIViewController */,
 				7A49A1A01F1C221300EA38A5 /* NotificationObservers */,
 				7A49A1A31F1C221300EA38A5 /* NSNotificationCenter */,
 				7A49A1A51F1C221300EA38A5 /* UIWindow */,
@@ -103,6 +113,24 @@
 				7A49A1B21F1C221300EA38A5 /* WindowOptionalAdaptor.swift */,
 			);
 			path = UIWindow;
+			sourceTree = "<group>";
+		};
+		7A8089E81FCB44D4000A71FA /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7A8089E91FCB44F5000A71FA /* ViewController.swift */,
+				7A8089EB1FCB4542000A71FA /* ViewControllerOptionalAdaptor.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		7A8089ED1FCB46B4000A71FA /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				7A8089EE1FCB46BF000A71FA /* Application.swift */,
+				7A8089F01FCB46CF000A71FA /* ApplicationOptionalAdaptor.swift */,
+			);
+			path = UIApplication;
 			sourceTree = "<group>";
 		};
 		7AD0C5331F0BFD9100670726 = {
@@ -254,9 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8089F11FCB46CF000A71FA /* ApplicationOptionalAdaptor.swift in Sources */,
 				7A49A1B41F1C221300EA38A5 /* Adaptable.swift in Sources */,
 				7A49A1B51F1C221300EA38A5 /* NotificationCenterExtensions.swift in Sources */,
+				7A8089EF1FCB46BF000A71FA /* Application.swift in Sources */,
 				7A49A1C21F1C221300EA38A5 /* WindowOptionalAdaptor.swift in Sources */,
+				7A8089EA1FCB44F5000A71FA /* ViewController.swift in Sources */,
+				7A8089EC1FCB4542000A71FA /* ViewControllerOptionalAdaptor.swift in Sources */,
 				7AB6FF3A1FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift in Sources */,
 				7A49A1BA1F1C221300EA38A5 /* KeyboardOptionalAdaptor.swift in Sources */,
 				7A037E851F532DD4003C30F4 /* Keyboard.swift in Sources */,

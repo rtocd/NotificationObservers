@@ -34,13 +34,6 @@ public extension Keyboard {
             return self.notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Int
         }
         
-        public var animationOptions: UIViewAnimationOptions? {
-            if let curve = self.animationCurve {
-                return UIViewAnimationOptions(rawValue: UInt(curve << 16))
-            }
-            return nil
-        }
-        
         public var startFrame: CGRect? {
             return (self.notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
         }
@@ -49,17 +42,25 @@ public extension Keyboard {
             self.notification = notification
         }
         
+        /// This is not part of the notification object, but it is so commonly used with UIView animation blocks.
+        public var animationOptions: UIViewAnimationOptions? {
+            if let curve = self.animationCurve {
+                return UIViewAnimationOptions(rawValue: UInt(curve << 16))
+            }
+            return nil
+        }
+        
         static func makeObserver(observe: Keyboard) -> NotificationObserver<Keyboard.OptionalAdaptor> {
-            return NotificationObserver<Keyboard.OptionalAdaptor>(name: observe.name)
+            return NotificationObserver(name: observe.name)
         }
     }
     
     public func makeOptionalObserver() -> NotificationObserver<OptionalAdaptor> {
-        return NotificationObserver<OptionalAdaptor>(name: self.name)
+        return NotificationObserver(name: self.name)
     }
     
     public static func makeOptionalObserver(_ keyboard: Keyboard) -> NotificationObserver<OptionalAdaptor> {
-        return NotificationObserver<OptionalAdaptor>(name: keyboard.name)
+        return NotificationObserver(name: keyboard.name)
     }
 }
 

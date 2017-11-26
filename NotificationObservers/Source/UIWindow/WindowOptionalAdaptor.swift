@@ -24,11 +24,11 @@ public extension Window {
     }
     
     public func makeOptionalObserver() -> NotificationObserver<OptionalAdaptor> {
-        return NotificationObserver<OptionalAdaptor>(name: self.name)
+        return NotificationObserver(name: self.name)
     }
     
     public static func makeOptionalObserver(_ window: Window) -> NotificationObserver<OptionalAdaptor> {
-        return NotificationObserver<OptionalAdaptor>(name: window.name)
+        return NotificationObserver(name: window.name)
     }
 }
 

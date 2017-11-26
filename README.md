@@ -82,7 +82,7 @@ struct CustomNotification: Adaptable {
     }
     
     static func makeObserver() -> NotificationObserver<CustomNotification> {
-        return NotificationObserver<CustomNotification>(name: .CustomNotificationKey)
+        return NotificationObserver(name: .CustomNotificationKey)
     }
 }
 
