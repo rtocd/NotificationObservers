@@ -9,9 +9,9 @@
 import Foundation
 
 public extension Keyboard {
-    
     public struct DefaultAdaptor: Adaptable {
-        public let adaptor: OptionalAdaptor
+        
+        private let adaptor: Adaptor
         
         public var animationDuration: TimeInterval {
             return self.adaptor.animationDuration ?? 0.0
@@ -39,20 +39,14 @@ public extension Keyboard {
         }
         
         public init(notification: Notification) {
-            self.adaptor = OptionalAdaptor(notification: notification)
-        }
-        
-        static func makeObserver(observe: Keyboard) -> NotificationObserver<Keyboard.DefaultAdaptor> {
-            return NotificationObserver(name: observe.name)
+            self.adaptor = Adaptor(notification: notification)
         }
     }
-    
-    public func makeDefaultObserver() -> NotificationObserver<DefaultAdaptor> {
+}
+
+extension KeyboardNotification {
+    public static func makeDefaultObserver() -> NotificationObserver<Keyboard.DefaultAdaptor> {
         return NotificationObserver(name: self.name)
-    }
-    
-    public static func makeDefaultObserver(_ keyboard: Keyboard) -> NotificationObserver<DefaultAdaptor> {
-        return NotificationObserver(name: keyboard.name)
     }
 }
 

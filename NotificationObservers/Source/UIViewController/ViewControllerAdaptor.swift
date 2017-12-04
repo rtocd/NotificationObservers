@@ -1,5 +1,5 @@
 //
-//  ViewControllerOptionalAdaptor.swift
+//  ViewControllerAdaptor.swift
 //  NotificationObservers
 //
 //  Created by rtocd on 11/26/17.
@@ -11,7 +11,7 @@ import Foundation
 extension ViewController {
     
     /// See Apple documentation for [UIViewController](https://developer.apple.com/documentation/foundation/nsnotification.name/1621368-uiviewcontrollershowdetailtarget) for more information
-    public struct OptionalAdaptor: Adaptable {
+    public struct Adaptor: Adaptable {
         public let notification: Notification
         
         public var viewController: UIViewController? {
@@ -22,12 +22,10 @@ extension ViewController {
             self.notification = notification
         }
     }
-    
-    public func makeOptionalObserver() -> NotificationObserver<OptionalAdaptor> {
+}
+
+extension KeyboardNotification {
+    public static func makeObserver() -> NotificationObserver<ViewController.Adaptor> {
         return NotificationObserver(name: self.name)
-    }
-    
-    public static func makeOptionalObserver(_ controller: ViewController) -> NotificationObserver<OptionalAdaptor> {
-        return NotificationObserver(name: controller.name)
     }
 }

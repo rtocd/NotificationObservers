@@ -11,7 +11,7 @@ import UIKit
 public extension Keyboard {
  
     /// See Apple documentation for [Keyboard Notification](https://developer.apple.com/documentation/uikit/uiwindow/keyboard_notification_user_info_keys) for more information
-    public struct OptionalAdaptor: Adaptable {
+    public struct Adaptor: Adaptable {
     
         public let notification: Notification
         
@@ -49,23 +49,17 @@ public extension Keyboard {
             }
             return nil
         }
-        
-        static func makeObserver(observe: Keyboard) -> NotificationObserver<Keyboard.OptionalAdaptor> {
-            return NotificationObserver(name: observe.name)
-        }
     }
-    
-    public func makeOptionalObserver() -> NotificationObserver<OptionalAdaptor> {
+}
+
+extension KeyboardNotification {
+    public static func makeObserver() -> NotificationObserver<Keyboard.Adaptor> {
         return NotificationObserver(name: self.name)
-    }
-    
-    public static func makeOptionalObserver(_ keyboard: Keyboard) -> NotificationObserver<OptionalAdaptor> {
-        return NotificationObserver(name: keyboard.name)
     }
 }
 
 // MARK: -
-extension Keyboard.OptionalAdaptor: CustomDebugStringConvertible {
+extension Keyboard.Adaptor: CustomDebugStringConvertible {
     public var debugDescription: String {
         return "Key: \(self.notification.name) [animationDuration: \(String(describing: self.animationDuration)), isLocal: \(String(describing:self.isLocal)), endFrame: \(String(describing:self.endFrame)), animationCurve: \(String(describing:self.animationCurve)), startFrame: \(String(describing:self.startFrame))]"
     }

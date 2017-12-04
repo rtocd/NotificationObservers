@@ -8,24 +8,22 @@
 
 import Foundation
 
+protocol WindowNotification {
+    static var name: Notification.Name { get }
+}
+
 /// Handles all the UIWindow notifications that are declared in [UIWindow](https://developer.apple.com/documentation/uikit/uiwindow)
-public enum Window {
-    case didBecomeHidden, didBecomeKey, didBecomeVisible, didResignKey
-    
-    public var name: Notification.Name {
-        var value: Notification.Name
-        
-        switch self {
-        case .didBecomeHidden:
-            value = .UIWindowDidBecomeHidden
-        case .didBecomeKey:
-            value = .UIWindowDidBecomeKey
-        case .didBecomeVisible:
-            value = .UIWindowDidBecomeVisible
-        case .didResignKey:
-            value = .UIWindowDidResignKey
-        }
-        
-        return value
+public struct Window {
+    public struct DidBecomeHidden: WindowNotification {
+        static let name = Notification.Name.UIWindowDidBecomeHidden
+    }
+    public struct DidBecomeKey: WindowNotification {
+        static let name = Notification.Name.UIWindowDidBecomeKey
+    }
+    public struct DidBecomeVisible: WindowNotification {
+        static let name = Notification.Name.UIWindowDidBecomeVisible
+    }
+    public struct DidResignKey: WindowNotification {
+        static let name = Notification.Name.UIWindowDidResignKey
     }
 }

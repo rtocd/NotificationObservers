@@ -8,18 +8,13 @@
 
 import Foundation
 
+protocol ViewControllerNotification {
+    static var name: Notification.Name { get }
+}
+
 /// See Apple documentation for [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller) for more information
-public enum ViewController {
-    case showDetailTargetDidChange
-    
-    public var name: Notification.Name {
-        var value: Notification.Name
-        
-        switch self {
-        case .showDetailTargetDidChange:
-            value = .UIViewControllerShowDetailTargetDidChange
-        }
-        
-        return value
+public struct ViewController {
+    public struct ShowDetailTargetDidChange: ViewControllerNotification {
+         static let name: Notification.Name = .UIViewControllerShowDetailTargetDidChange
     }
 }

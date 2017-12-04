@@ -11,7 +11,7 @@ import Foundation
 public extension Window {
 
     /// See Apple documentation for [UIWindow](https://developer.apple.com/documentation/uikit/uiwindow) for more information
-    public struct OptionalAdaptor: Adaptable {
+    public struct Adaptor: Adaptable {
         public let notification: Notification
         
         public var window: UIWindow? {
@@ -22,18 +22,16 @@ public extension Window {
             self.notification = notification
         }
     }
-    
-    public func makeOptionalObserver() -> NotificationObserver<OptionalAdaptor> {
+}
+
+extension WindowNotification {
+    public static func makeObserver() -> NotificationObserver<Window.Adaptor> {
         return NotificationObserver(name: self.name)
-    }
-    
-    public static func makeOptionalObserver(_ window: Window) -> NotificationObserver<OptionalAdaptor> {
-        return NotificationObserver(name: window.name)
     }
 }
 
 // MARK: - 
-extension Window.OptionalAdaptor: CustomDebugStringConvertible {
+extension Window.Adaptor: CustomDebugStringConvertible {
     public var debugDescription: String {
         return "[window: \(String(describing: self.window)))]"
     }
