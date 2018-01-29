@@ -74,7 +74,7 @@ public struct Application {
         static let name: Notification.Name = .UIApplicationWillTerminate
     }
     
-    public struct contentSizeCategoryDidChange: ApplicationNotification {
+    public struct ContentSizeCategoryDidChange: ApplicationNotification {
         static let name: Notification.Name = .UIContentSizeCategoryDidChange
     }
     

@@ -57,6 +57,25 @@ extension Application {
             self.notification = notification
         }
     }
+    
+    public struct ContentSizeCategoryDidChangeAdaptor: Adaptable {
+        public let notification: Notification
+        
+        public var application: UIApplication? {
+            return self.notification.object as? UIApplication
+        }
+        
+        public var categoryNewValue: UIContentSizeCategory? {
+            if let value = self.notification.userInfo?[UIContentSizeCategoryNewValueKey] as? UIContentSizeCategory {
+                return value
+            }
+            return nil
+        }
+        
+        public init(notification: Notification) {
+            self.notification = notification
+        }
+    }
 }
 
 extension ApplicationNotification {
@@ -85,6 +104,12 @@ extension Application.WillChangeStatusBarOrientation {
 
 extension Application.DidChangeStatusBarOrientation {
     public static func makeObserver() -> NotificationObserver<Application.StatusBarOrientationAdaptor> {
+        return NotificationObserver(name: self.name)
+    }
+}
+
+extension Application.ContentSizeCategoryDidChange {
+    public static func makeObserver() -> NotificationObserver<Application.ContentSizeCategoryDidChangeAdaptor> {
         return NotificationObserver(name: self.name)
     }
 }
