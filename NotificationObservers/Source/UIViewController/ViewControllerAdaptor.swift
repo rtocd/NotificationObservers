@@ -24,6 +24,7 @@ extension ViewController {
     }
 }
 
+// MARK: - 
 extension KeyboardNotification {
     public static func makeObserver() -> NotificationObserver<ViewController.Adaptor> {
         return NotificationObserver(name: self.name)

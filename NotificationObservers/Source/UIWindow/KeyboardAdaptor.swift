@@ -42,7 +42,7 @@ public extension Keyboard {
             self.notification = notification
         }
         
-        /// This is not part of the notification object, but it is so commonly used with UIView animation blocks.
+        /// This is not part of the notification object, but it is commonly used with UIView animation blocks.
         public var animationOptions: UIViewAnimationOptions? {
             if let curve = self.animationCurve {
                 return UIViewAnimationOptions(rawValue: UInt(curve << 16))
@@ -52,6 +52,7 @@ public extension Keyboard {
     }
 }
 
+// MARK: - 
 extension KeyboardNotification {
     public static func makeObserver() -> NotificationObserver<Keyboard.Adaptor> {
         return NotificationObserver(name: self.name)

@@ -44,6 +44,7 @@ public extension Keyboard {
     }
 }
 
+// MARK: - 
 extension KeyboardNotification {
     public static func makeDefaultObserver() -> NotificationObserver<Keyboard.DefaultAdaptor> {
         return NotificationObserver(name: self.name)

@@ -17,18 +17,23 @@ public struct Keyboard {
     public struct WillShow: KeyboardNotification {
         static let name = Notification.Name.UIKeyboardWillShow
     }
+    
     public struct WillChangeFrame: KeyboardNotification {
         static let name = Notification.Name.UIKeyboardWillChangeFrame
     }
+    
     public struct WillHide: KeyboardNotification {
         static let name = Notification.Name.UIKeyboardWillHide
     }
+    
     public struct DidShow: KeyboardNotification {
         static let name = Notification.Name.UIKeyboardDidShow
     }
+    
     public struct DidChangeFrame: KeyboardNotification {
         static let name = Notification.Name.UIKeyboardDidChangeFrame
     }
+    
     public struct DidHide: KeyboardNotification {
         static let name = Notification.Name.UIKeyboardDidHide
     }

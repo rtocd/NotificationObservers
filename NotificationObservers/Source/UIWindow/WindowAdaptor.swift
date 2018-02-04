@@ -24,6 +24,7 @@ public extension Window {
     }
 }
 
+// MARK: - 
 extension WindowNotification {
     public static func makeObserver() -> NotificationObserver<Window.Adaptor> {
         return NotificationObserver(name: self.name)

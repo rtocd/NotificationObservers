@@ -17,12 +17,15 @@ public struct Window {
     public struct DidBecomeHidden: WindowNotification {
         static let name = Notification.Name.UIWindowDidBecomeHidden
     }
+    
     public struct DidBecomeKey: WindowNotification {
         static let name = Notification.Name.UIWindowDidBecomeKey
     }
+    
     public struct DidBecomeVisible: WindowNotification {
         static let name = Notification.Name.UIWindowDidBecomeVisible
     }
+    
     public struct DidResignKey: WindowNotification {
         static let name = Notification.Name.UIWindowDidResignKey
     }

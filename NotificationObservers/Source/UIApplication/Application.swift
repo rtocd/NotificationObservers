@@ -17,7 +17,7 @@ public struct Application {
     public struct BackgroundRefreshStatusDidChange: ApplicationNotification {
         static let name: Notification.Name = .UIApplicationBackgroundRefreshStatusDidChange
     }
-    
+
     public struct DidBecomeActive: ApplicationNotification {
         static let name: Notification.Name = .UIApplicationDidBecomeActive
     }
@@ -34,7 +34,7 @@ public struct Application {
         static let name: Notification.Name = .UIApplicationDidEnterBackground
     }
     
-    public struct didFinishLaunching: ApplicationNotification {
+    public struct DidFinishLaunching: ApplicationNotification {
         static let name: Notification.Name = .UIApplicationDidFinishLaunching
     }
     

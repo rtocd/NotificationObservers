@@ -17,7 +17,6 @@
 		7A8089EC1FCB4542000A71FA /* ViewControllerAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8089EB1FCB4542000A71FA /* ViewControllerAdaptor.swift */; };
 		7A8089EF1FCB46BF000A71FA /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8089EE1FCB46BF000A71FA /* Application.swift */; };
 		7A8089F11FCB46CF000A71FA /* ApplicationAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8089F01FCB46CF000A71FA /* ApplicationAdaptor.swift */; };
-		7A8D6CD81FD4C07500C952FF /* StructKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D6CD71FD4C07500C952FF /* StructKeyboard.swift */; };
 		7AAAE0D71F9D8E0E005C1D3D /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAAE0D61F9D8E0E005C1D3D /* Window.swift */; };
 		7AB6FF3A1FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6FF391FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift */; };
 		7AD0C5471F0BFD9100670726 /* NotificationObservers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */; };
@@ -46,7 +45,6 @@
 		7A8089EB1FCB4542000A71FA /* ViewControllerAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdaptor.swift; sourceTree = "<group>"; };
 		7A8089EE1FCB46BF000A71FA /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		7A8089F01FCB46CF000A71FA /* ApplicationAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAdaptor.swift; sourceTree = "<group>"; };
-		7A8D6CD71FD4C07500C952FF /* StructKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructKeyboard.swift; sourceTree = "<group>"; };
 		7AAAE0D61F9D8E0E005C1D3D /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		7AB6FF391FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDefaultAdaptor.swift; sourceTree = "<group>"; };
 		7AD0C53D1F0BFD9100670726 /* NotificationObservers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotificationObservers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +111,6 @@
 				7A49A1AA1F1C221300EA38A5 /* KeyboardAdaptor.swift */,
 				7AB6FF391FB8CC6C0041E137 /* KeyboardDefaultAdaptor.swift */,
 				7A49A1B21F1C221300EA38A5 /* WindowAdaptor.swift */,
-				7A8D6CD71FD4C07500C952FF /* StructKeyboard.swift */,
 			);
 			path = UIWindow;
 			sourceTree = "<group>";
@@ -230,7 +227,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = RTOCD;
 				TargetAttributes = {
 					7AD0C53C1F0BFD9100670726 = {
@@ -287,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8089F11FCB46CF000A71FA /* ApplicationAdaptor.swift in Sources */,
-				7A8D6CD81FD4C07500C952FF /* StructKeyboard.swift in Sources */,
 				7A49A1B41F1C221300EA38A5 /* Adaptable.swift in Sources */,
 				7A49A1B51F1C221300EA38A5 /* NotificationCenterExtensions.swift in Sources */,
 				7A8089EF1FCB46BF000A71FA /* Application.swift in Sources */,
@@ -439,7 +435,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = KN2LTA8S52;
 				DYLIB_COMPATIBILITY_VERSION = 1;
