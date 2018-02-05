@@ -39,7 +39,7 @@ import UIKit
 import NotificationObservers
 
 class ViewController: UIViewController {
-    var keyboardWillShowObserver = Keyboard.willShow.makeDefaultObserver()
+    var keyboardWillShowObserver = Keyboard.WillShow.makeDefaultObserver()
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -62,6 +62,10 @@ Here is an example of what to do, if you want to create your own Notification us
 
 ```swift
 import NotificationObservers
+
+extension Notification.Name {
+    static let CustomNotificationKey = Notification.Name("CustomNotificationKey")
+}
 
 struct CustomNotification: Adaptable {
     let notification: Notification
@@ -86,9 +90,6 @@ struct CustomNotification: Adaptable {
     }
 }
 
-extension Notification.Name {
-    static let CustomNotificationKey = Notification.Name("CustomNotificationKey")
-}
 
 // MARK: - Example Use
 class ViewController: UIViewController {
