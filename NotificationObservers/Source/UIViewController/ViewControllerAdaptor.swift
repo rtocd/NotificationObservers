@@ -25,8 +25,15 @@ extension ViewController {
 }
 
 // MARK: - 
-extension KeyboardNotification {
+extension ViewControllerNotification {
     public static func makeObserver() -> NotificationObserver<ViewController.Adaptor> {
         return NotificationObserver(name: self.name)
+    }
+}
+
+// MARK: -
+extension ViewController.Adaptor: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return "[viewController: \(String(describing: self.viewController)))]"
     }
 }

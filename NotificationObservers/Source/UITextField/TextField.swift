@@ -17,12 +17,7 @@ protocol TextFieldNotification {
  */
 public struct TextField {
     
-    /**
-     Notifies observers that the text in a text field changed.
-     
-     - SeeAlso:
-     [UITextFieldTextDidChange Documentation](https://developer.apple.com/documentation/foundation/nsnotification.name/1619640-uitextfieldtextdidchange)
-     */
+    /// [UITextFieldTextDidChange Documentation](https://developer.apple.com/documentation/foundation/nsnotification.name/1619640-uitextfieldtextdidchange)
     public struct TextDidChange: TextFieldNotification {
         static let name: Notification.Name = .UITextFieldTextDidChange
     }

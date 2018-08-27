@@ -28,3 +28,10 @@ extension TextFieldNotification {
         return NotificationObserver(name: self.name)
     }
 }
+
+// MARK: - 
+extension TextField.Adaptor: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return "[textField: \(String(describing: self.textField)))]"
+    }
+}

@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// This extension make it so we can just use 
+/// This extension make it so we can just use are Adaptor and not NotificationObserver object
 public extension NotificationCenter {
     public func addObserver<A: Adaptable>(key: Notification.Name, object: AnyObject? = nil, queue: OperationQueue = .main, callback: @escaping (A) -> Void) -> NSObjectProtocol {
         return addObserver(forName: key, object: object, queue: queue, using: { notification in

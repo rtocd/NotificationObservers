@@ -162,3 +162,35 @@ extension Application.DidFinishLaunching {
         return NotificationObserver(name: self.name)
     }
 }
+
+// MARK: - 
+// TODO: Finish console debugging
+extension Application.Adaptor: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return "[application: \(String(describing: self.application)))]"
+    }
+}
+
+extension Application.StatusBarFrameAdaptor: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return "[application: \(String(describing: self.application)))]"
+    }
+}
+
+extension Application.StatusBarOrientationAdaptor: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return "[application: \(String(describing: self.application)))]"
+    }
+}
+
+extension Application.ContentSizeCategoryDidChangeAdaptor: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return "[application: \(String(describing: self.application)))]"
+    }
+}
+
+extension Application.DidFinishLaunchingAdaptor: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return "[application: \(String(describing: self.application)))]"
+    }
+}

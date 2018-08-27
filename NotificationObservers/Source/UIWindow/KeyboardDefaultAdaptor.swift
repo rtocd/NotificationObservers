@@ -9,6 +9,11 @@
 import Foundation
 
 public extension Keyboard {
+    
+    
+    /**
+     This will pick default values for a Keyboard notification. So we do have to keep checking for optional values
+     */
     public struct DefaultAdaptor: Adaptable {
         
         private let adaptor: Adaptor
